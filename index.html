@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+
     <header>
-        <nav>
+        <nav class="navbar">
             <a href="#home" class="logo">SHAURAB</a>
-            <ul class="nav-links">
+
+            <button class="menu-toggle" id="menu-button" aria-expanded="false">☰</button>
+
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -20,20 +24,26 @@
 
     <main>
         <section id="about">
-            <h1>About Me</h1>
-            
-            <p>
-                Hello! I'm Shaurab, a cyber security student in Herald College. 
-                This is my portfolio where I showcase my work and skills.
-            </p>
-            <p>
-                I love study and work about computer network.  
-                Feel free to explore my projects and get in touch!
-            </p>
+            <div class="about-video-wrap">
+                <video id="about-video" src="Images/Video.mp4" muted autoplay loop playsinline aria-hidden="true"></video>
+            </div>
+
+            <div class="about-content">
+                <h1>About Me</h1>
+                <p>
+                    Hello! I'm Shaurab, a cyber security student at Herald College.
+                    This is my portfolio where I showcase my work and skills.
+                </p>
+                <p>
+                    I love studying and exploring computer networks.  
+                    Feel free to explore my projects and get in touch!
+                </p>
+            </div>
         </section>
 
         <section id="projects">
             <h2>My Projects</h2>
+
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
@@ -54,42 +64,47 @@
                         <p>Ethical hacking is the practice of legally breaking into computer systems to find weaknesses before malicious hackers can exploit them. Ethical hackers use the same tools and techniques as attackers, but with permission and the goal of strengthening security.</p>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-image">
                         <img src="Images/project3.jpg" alt="Project 3">
                     </div>
                     <div class="project-info">
                         <h3>Project Three</h3>
-                        <p>I love to learn ethical hacking. I am passonate about how cyber crimes are done and how to deal with cyber crimes.</p>
+                        <p>I love to learn ethical hacking. I am passionate about how cyber crimes are done and how to deal with cyber crimes.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Contact Us...</h2>
+            <h2>Contact Me</h2>
+
             <form class="contact-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Your name">
+                    <input type="text" id="name" placeholder="Your name">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="your.email@example.com">
+                    <input type="email" id="email" placeholder="your.email@example.com">
                 </div>
 
                 <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Your message here..."></textarea>
+                    <textarea id="message" placeholder="Your message here..."></textarea>
                 </div>
 
                 <button type="submit">Send Message</button>
             </form>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 Shaurab. All rights reserved.</p>
     </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
